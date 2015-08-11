@@ -1,0 +1,13 @@
+*.opensdf
+*.sdf
+*.log
+vsprojects/Debug/lite-test.tlog/unsuccessfulbuild
+vsprojects/Debug/test_plugin.tlog/unsuccessfulbuild
+vsprojects/Debug/tests.tlog/unsuccessfulbuild
+vsprojects/x64/Debug/libprotobuf.tlog/unsuccessfulbuild
+vsprojects/x64/Debug/libprotoc.tlog/unsuccessfulbuild
+vsprojects/x64/Debug/lite-test.tlog/unsuccessfulbuild
+vsprojects/x64/Debug/protoc.tlog/unsuccessfulbuild
+vsprojects/x64/Debug/test_plugin.tlog/unsuccessfulbuild
+vsprojects/x64/Debug/tests.tlog/unsuccessfulbuild
+vsprojects/Debug/libprotobuf-lite.tlog/unsuccessfulbuild
