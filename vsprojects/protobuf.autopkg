@@ -17,9 +17,10 @@ nuget {
     }
    
     files {
-		include += include\google\protobuf\*.h;
-		include += include\google\protobuf\io\*.h;
-		include += include\google\protobuf\stubs\*.h;
+		myinclude: {
+			#destination = ${d_include}google\protobuf;
+			include\**\*
+		};
         [v120,Static,x64,Release] { 
             lib += v120\x64\Release\*.lib;
 			bin += v120\x64\Release\protoc.exe;
