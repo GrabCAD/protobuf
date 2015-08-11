@@ -20,3 +20,4 @@ vsprojects/Debug/libprotobuf-lite.tlog/unsuccessfulbuild
 *.idb
 *.h
 vsprojects/v120/
+*.nupkg

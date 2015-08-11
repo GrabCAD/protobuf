@@ -17,7 +17,7 @@ nuget {
     }
    
     files {
-		include: { };
+		include: { "include\**" };
         [x64,v120,Release] { 
             lib += v120\x64\Release\libprotobuf.lib;
         }
