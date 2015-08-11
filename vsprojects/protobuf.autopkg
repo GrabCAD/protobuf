@@ -1,10 +1,10 @@
 nuget {
     nuspec {
         id = protobuf-vc120;
-        version : 2.6.1.0;
+        version : 2.6.1.2;
         title : Protocol Buffers v120;
         authors : google;
-        owners : Frank Lindeman;
+        owners : Frank Lindeman (Stratasys);
         licenseUrl : "https://github.com/google/protobuf/blob/master/LICENSE";
         projectUrl: "https://github.com/GrabCAD/protobuf";
         iconUrl: "https://developers.google.com/_static/a63074ec8d/images/redesign-14/devsite-logo-white-icon.svg";
@@ -17,21 +17,26 @@ nuget {
     }
    
     files {
-		include: { "include\**" };
-        [x64,v120,Release] { 
-            lib += v120\x64\Release\libprotobuf.lib;
+		include += include\google\protobuf\*.h;
+		include += include\google\protobuf\io\*.h;
+		include += include\google\protobuf\stubs\*.h;
+        [v120,Static,x64,Release] { 
+            lib += v120\x64\Release\*.lib;
+			bin += v120\x64\Release\protoc.exe;
         }
 
-        [x64,v120,Debug] { 
-            lib += v120\x64\Debug\libprotobuf.lib;
+        [v120,Static,x64,Debug] { 
+            lib += v120\x64\Debug\*.lib;
+			bin += v120\x64\Debug\protoc.exe;
         }
 
-        [win32,v120,Release] { 
-            lib += v120\Release\libprotobuf.lib;
+        [v120,Static,win32,Release] { 
+            lib += v120\Release\*.lib;
+			bin += v120\Release\protoc.exe;
         }
-
-        [win32,v120,Debug] { 
-            lib += v120\Debug\libprotobuf.lib;
+        [v120,Static,win32,Debug] { 
+            lib += v120\Debug\*.lib;
+			bin += v120\Debug\protoc.exe;
         }
     }
 }
