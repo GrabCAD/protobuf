@@ -12,10 +12,11 @@ vsprojects/x64/Debug/test_plugin.tlog/unsuccessfulbuild
 vsprojects/x64/Debug/tests.tlog/unsuccessfulbuild
 vsprojects/Debug/libprotobuf-lite.tlog/unsuccessfulbuild
 *.lib
-*.exe
 *.ilk
 *.pdb
 *.obj
 *.lastbuildstate
 *.tlog
 *.idb
+*.h
+vsprojects/v120/
