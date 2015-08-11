@@ -11,7 +11,7 @@ nuget {
         requireLicenseAcceptance:false;
         summary: Protocol Buffers (C++) vc120 libraries;
         description: @"Protocol Buffers are a way of encoding structured data in an efficient yet extensible format.";
-        releaseNotes: "Stratasys modified version for multi-platform support";
+        releaseNotes: "Stratasys modified version for multi-platform support based on version 2.6.1";
         copyright: Copyright 2013;
         tags: { native, cpp, protobuf, serialization };
     }
@@ -21,23 +21,25 @@ nuget {
 			#destination = ${d_include}google\protobuf;
 			include\**\*
 		};
+		
+		mytools: {
+			#destination = ${d_tools}v120;
+			v120\Release\protoc.exe;
+		};
+		
         [v120,Static,x64,Release] { 
             lib += v120\x64\Release\*.lib;
-			bin += v120\x64\Release\protoc.exe;
-        }
+	   }
 
         [v120,Static,x64,Debug] { 
             lib += v120\x64\Debug\*.lib;
-			bin += v120\x64\Debug\protoc.exe;
-        }
+	    }
 
         [v120,Static,win32,Release] { 
             lib += v120\Release\*.lib;
-			bin += v120\Release\protoc.exe;
-        }
+	    }
         [v120,Static,win32,Debug] { 
             lib += v120\Debug\*.lib;
-			bin += v120\Debug\protoc.exe;
-        }
+	    }
     }
 }
