@@ -11,24 +11,28 @@ Usage of Protocol Buffers does not change very often.
 ## Branch
 
 At present Protocol Buffers version 2.0 is used. The most recent version is v2.6.1.
-There is corresponding branch called "ssys-v2.6.1", starting at the v2.6.1 tag.
+There is a corresponding branch called "ssys-v2.6.1", starting at the v2.6.1 tag.
 
+## Supported compilers
 
-## Building newer versions of NuGet packages #
+Windows - Visual Studio 2013 - Multi-threaded (Debug) dll run-time library (/MD and /MDd)
 
-## Requirements ##
+## Building newer versions of NuGet packages ##
+
+** Requirements **
 For building native C++ nuget packages we use [CoApp](http://coapp.org), download and install [CoApp cmdlets for powershell](http://downloads.coapp.org/files/CoApp.Tools.Powershell.msi).
 This requires Powershell 3.0. Make sure the execution policy is set to "RemoteSigned" (run PS as Administrator).
 
 
-## Corrections to solution/project
+** Corrections to solution/project **
 
 * remove gtest/gmain. The .vcprojs are missing
 * change intermediary output dir conform http://stackoverflow.com/questions/20643370/visual-studio-2013-fatal-error-c1041-fs to avoid compile errors in VS2013
 * don't build any test projects. Assume others have tested it for us.
+* ensure stl_utils.h is included in package
 
 
-## Steps
+** Steps **
 
 * clone or pull "GrabCAD\protobuf"
 * switch to branch ssys-v2.6.1
@@ -36,7 +40,7 @@ This requires Powershell 3.0. Make sure the execution policy is set to "RemoteSi
 * make any edits
 * update the version in "protobuf.autopkg" by incrementing the 4th digit in the line "version : 2.6.1.n;"
 * run .\scripts\build_all
-* manually upload generated package of name "protobuf-vc120.2.6.1.*.nupkg"
+* manually upload generated package of name "protobuf-vc120.2.6.1.n.nupkg"
   * navigate to https://nuget.grabcad.net/feeds/ps-release (you must in a Stratasys development office or connected through VPN with one)
   * click "Add Package"
   * select "Upload from disk"
