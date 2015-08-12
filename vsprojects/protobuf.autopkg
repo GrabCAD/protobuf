@@ -1,9 +1,9 @@
 nuget {
     nuspec {
         id = protobuf-vc120;
-        version : 2.6.1.4;
+        version : 2.6.1.5;
         title : Protocol Buffers v120;
-        authors : google;
+        authors : Stratasys;
         owners : Frank Lindeman (Stratasys);
         licenseUrl : "https://github.com/google/protobuf/blob/master/LICENSE";
         projectUrl: "https://github.com/GrabCAD/protobuf";
