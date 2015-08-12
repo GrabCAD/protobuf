@@ -1,6 +1,53 @@
 Protocol Buffers - Google's data interchange format
 ===================================================
 
+# Staging repo to provide prebuilt and packaged Google Protocol Buffers compiler and libraries to other repos within Stratasys
+
+## Motivation
+Usage of Protocol Buffers does not change very often.
+
+## Branch
+
+At present Protocol Buffers version 2.0 is used. The most recent version is v2.6.1.
+There is corresponding branch called "ssys-v2.6.1", starting at the v2.6.1 tag.
+
+
+## Building newer versions of NuGet packages #
+
+## Requirements ##
+For building c++ nuget packages we use [CoApp](http://coapp.org), download and install [CoApp cmdlets for powershell](http://downloads.coapp.org/files/CoApp.Tools.Powershell.msi).
+This requires Powershell 3.0. Make sure the execution policy is set to "RemoteSigned" (run PS as Administrator)
+
+Write-NuGetPackage -Package .\protobuf.autopkg -Verbose
+
+.autopkg => .nupkg
+
+
+## Corrections to solution/project
+
+* remove gtest/gmain. The .vcprojs are missing
+* change intermediary output dir conform http://stackoverflow.com/questions/20643370/visual-studio-2013-fatal-error-c1041-fs to avoid compile errors in VS2013
+* don't build any test projects. Assume others have tested it for us.
+
+
+## Steps
+
+* clone or pull "GrabCAD\protobuf"
+* switch to branch ssys-v2.6.1
+* cd into "vsprojects"
+* make any edits
+* update the version in "protobuf.autopkg" by incrementing the 4th digit in the line "version : 2.6.1.n;"
+* run .\scripts\build_all
+* manually upload generated package of name "protobuf-vc120.2.6.1.*.nupkg"
+** navigate to https://nuget.grabcad.net/feeds/ps-release (you must in a Stratasys development office or connected through VPN with one)
+** click "Add Package"
+** select "Upload from disk"
+** navigate to nupkg file
+** click "Upload file"
+
+................................................................
+Original README from here
+
 Copyright 2008 Google Inc.
 
 https://developers.google.com/protocol-buffers/
