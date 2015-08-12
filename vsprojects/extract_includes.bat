@@ -14,6 +14,7 @@ copy ..\src\google\protobuf\stubs\once.h include\google\protobuf\stubs\once.h
 copy ..\src\google\protobuf\stubs\platform_macros.h include\google\protobuf\stubs\platform_macros.h
 copy ..\src\google\protobuf\stubs\template_util.h include\google\protobuf\stubs\template_util.h
 copy ..\src\google\protobuf\stubs\type_traits.h include\google\protobuf\stubs\type_traits.h
+copy ..\src\google\protobuf\stubs\stl_util.h include\google\protobuf\stubs\stl_util.h
 copy ..\src\google\protobuf\descriptor.h include\google\protobuf\descriptor.h
 copy ..\src\google\protobuf\descriptor.pb.h include\google\protobuf\descriptor.pb.h
 copy ..\src\google\protobuf\descriptor_database.h include\google\protobuf\descriptor_database.h

@@ -1,7 +1,7 @@
 nuget {
     nuspec {
         id = protobuf-vc120;
-        version : 2.6.1.3;
+        version : 2.6.1.4;
         title : Protocol Buffers v120;
         authors : google;
         owners : Frank Lindeman (Stratasys);
