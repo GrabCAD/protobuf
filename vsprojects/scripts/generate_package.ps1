@@ -1,0 +1,1 @@
+Write-NuGetPackage protobuf.autopkg
