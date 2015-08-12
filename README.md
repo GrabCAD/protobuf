@@ -15,7 +15,10 @@ There is a corresponding branch called "ssys-v2.6.1", starting at the v2.6.1 tag
 
 ## Supported compilers
 
-Windows - Visual Studio 2013 - Multi-threaded (Debug) dll run-time library (/MD and /MDd)
+Windows - Visual Studio 2013 - Multi-threaded (Debug) dll run-time library (/MD and /MDd) - 32-bit and 64-bit
+
+Note the protoc.exe compiler is only compiled to 32-bit Release
+
 
 ## Building newer versions of NuGet packages ##
 
