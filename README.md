@@ -1,7 +1,9 @@
 Protocol Buffers - Google's data interchange format
 ===================================================
 
-# Staging repo to provide prebuilt and packaged Google Protocol Buffers compiler and libraries to other repos within Stratasys
+Staging repo to provide prebuilt and packaged Google Protocol Buffers compiler and libraries to other repos within Stratasys.
+Staging is done manually. I.e. this repo is not setup for automatic building and deployment through a TeamCity project (although it should be fairly srtaightforward).
+
 
 ## Motivation
 Usage of Protocol Buffers does not change very often.
@@ -15,12 +17,8 @@ There is corresponding branch called "ssys-v2.6.1", starting at the v2.6.1 tag.
 ## Building newer versions of NuGet packages #
 
 ## Requirements ##
-For building c++ nuget packages we use [CoApp](http://coapp.org), download and install [CoApp cmdlets for powershell](http://downloads.coapp.org/files/CoApp.Tools.Powershell.msi).
-This requires Powershell 3.0. Make sure the execution policy is set to "RemoteSigned" (run PS as Administrator)
-
-Write-NuGetPackage -Package .\protobuf.autopkg -Verbose
-
-.autopkg => .nupkg
+For building native C++ nuget packages we use [CoApp](http://coapp.org), download and install [CoApp cmdlets for powershell](http://downloads.coapp.org/files/CoApp.Tools.Powershell.msi).
+This requires Powershell 3.0. Make sure the execution policy is set to "RemoteSigned" (run PS as Administrator).
 
 
 ## Corrections to solution/project
@@ -39,14 +37,15 @@ Write-NuGetPackage -Package .\protobuf.autopkg -Verbose
 * update the version in "protobuf.autopkg" by incrementing the 4th digit in the line "version : 2.6.1.n;"
 * run .\scripts\build_all
 * manually upload generated package of name "protobuf-vc120.2.6.1.*.nupkg"
-** navigate to https://nuget.grabcad.net/feeds/ps-release (you must in a Stratasys development office or connected through VPN with one)
-** click "Add Package"
-** select "Upload from disk"
-** navigate to nupkg file
-** click "Upload file"
+  * navigate to https://nuget.grabcad.net/feeds/ps-release (you must in a Stratasys development office or connected through VPN with one)
+  * click "Add Package"
+  * select "Upload from disk"
+  * navigate to nupkg file
+  * click "Upload file"
 
 ................................................................
 Original README from here
+................................................................
 
 Copyright 2008 Google Inc.
 
