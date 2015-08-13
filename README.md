@@ -69,9 +69,12 @@ Along the way some corrections/modifications were made:
 * don't build any test projects. Assume others have tested it for us.
 * ensure stl_utils.h is included in package by modifying "extract_includes.bat" coming with Protocol Buffers
 
-................................................................
-Original README from here
-................................................................
+
+----------
+***Original README from here***
+
+
+
 
 Copyright 2008 Google Inc.
 
