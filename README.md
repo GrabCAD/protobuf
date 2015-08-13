@@ -59,6 +59,8 @@ This requires Powershell 3.0. Make sure the execution policy is set to "RemoteSi
 	* check "Generate default POM"
 	" click "Deploy Artifact"
 
+The alternative to deploying to Maven would have been to let an ant based project using a local nuget exe to pull down the NuGet artifact. But that would not integrate as nicely with ant/ivy.
+
   
 **Corrections to solution/project**
 
