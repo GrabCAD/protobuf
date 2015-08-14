@@ -18,3 +18,7 @@ del *.nupkg
 @echo Start building NuGet package
 PowerShell -Command "& { .\scripts\generate_package.ps1 }"
 @echo Finished building NuGet package
+
+@echo Start building Zip package
+7za a protobuf-v120-2.6.1.6.zip v120\Release\protoc.exe ..\src\google\protobuf\descriptor.proto
+@echo Finished building Zip package

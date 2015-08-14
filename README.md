@@ -35,8 +35,9 @@ This requires Powershell 3.0. Make sure the execution policy is set to "RemoteSi
 * cd into "vsprojects"
 * make any edits
 * update the version in "protobuf.autopkg" by incrementing the 4th digit in the line "version : 2.6.1.n;"
+* update the version in "scripts\build_all.bat" by incrementing the 4th digit in the line "7za a protobuf-v120-2.6.1.n.zip" 
 * run .\scripts\build_all
-* manually upload generated package of name "protobuf-vc120.2.6.1.n.nupkg" to in-house NuGet repository;
+* manually upload generated package of name "protobuf-v120.2.6.1.n.nupkg" to in-house NuGet repository;
   * navigate to https://nuget.grabcad.net/feeds/ps-release (you must in a Stratasys development office or connected through VPN with one)
   * click "Add Package"
   * select "Upload from disk"
@@ -46,16 +47,16 @@ This requires Powershell 3.0. Make sure the execution policy is set to "RemoteSi
   * navigate to https://maven.grabcad.net/artifactory/webapp/login.html?0
   * use your GrabCAD LDAP credentials to login
   * go to "Deploy" tab
-  * browse to file to upload by clicking "Choose file"; this would <your_github_root>\protobuf\vsprojects\v120\Release\protoc.exe
+  * browse to file to upload by clicking "Choose file"; this would <your_github_root>\protobuf\vsprojects\protobuf-v120-2.6.1.n.zip
   * click "Upload"
   * fill in Maven attributes:
     * check "Deploy as Maven Artifact"
 	* set "Target Repository" to "libs-release-local"
 	* set "GroupId" to "com.stratasys.protobuf"
-	* set "ArtifactId" to "protoc"
+	* set "ArtifactId" to "protobuf"
 	* set "Version" to "2.6.1.n"
 	* set "Classifier" to "v120"
-	* set "Type" to "exe"
+	* set "Type" to "zip"
 	* check "Generate default POM"
 	" click "Deploy Artifact"
 

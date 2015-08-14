@@ -21,3 +21,4 @@ vsprojects/Debug/libprotobuf-lite.tlog/unsuccessfulbuild
 *.h
 vsprojects/v120/
 *.nupkg
+*.zip

@@ -1,7 +1,7 @@
 nuget {
     nuspec {
-        id = protobuf-vc120;
-        version : 2.6.1.5;
+        id = protobuf-v120;
+        version : 2.6.1.6;
         title : Protocol Buffers v120;
         authors : Stratasys;
         owners : Frank Lindeman (Stratasys);
@@ -9,10 +9,10 @@ nuget {
         projectUrl: "https://github.com/GrabCAD/protobuf";
         iconUrl: "https://developers.google.com/_static/a63074ec8d/images/redesign-14/devsite-logo-white-icon.svg";
         requireLicenseAcceptance:false;
-        summary: Protocol Buffers (C++) vc120 libraries;
+        summary: Protocol Buffers (C++) v120 libraries;
         description: @"Protocol Buffers are a way of encoding structured data in an efficient yet extensible format.";
         releaseNotes: "Stratasys modified version for multi-platform support based on version 2.6.1";
-        copyright: Copyright 2013;
+        copyright: Copyright 2015;
         tags: { native, cpp, protobuf, serialization };
     }
    
