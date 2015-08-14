@@ -2,7 +2,7 @@ Protocol Buffers - Google's data interchange format
 ===================================================
 
 Staging repo to provide prebuilt and packaged Google Protocol Buffers compiler and libraries to other repos within Stratasys.
-Staging is done manually. I.e. this repo is not setup for automatic building and deployment through a TeamCity project (although it should be fairly srtaightforward).
+Staging is done manually on a Windows machine. I.e. this repo is not setup for automatic building and deployment through a TeamCity project (although it should be fairly srtaightforward).
 
 
 ## Motivation
@@ -26,6 +26,9 @@ Note the protoc.exe compiler is only compiled to 32-bit Release
 
 For building native C++ NuGet packages we use [CoApp](http://coapp.org), download and install [CoApp cmdlets for powershell](http://downloads.coapp.org/files/CoApp.Tools.Powershell.msi).
 This requires Powershell 3.0. Make sure the execution policy is set to "RemoteSigned" (run PS as Administrator).
+
+For building zip files we use the command line version of 7Zip from http://www.7-zip.org/a/7za920.zip.
+Ensure 7za.exe is in your PATH.
 
 
 **Steps**
